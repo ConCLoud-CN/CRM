@@ -1,0 +1,1379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Logo="ExpressAppLogo" Company="上海悠云实业有限公司" Copyright="Concloud">
+  <ActionDesign>
+    <Actions>
+      <Action Id="Cancel" Caption="取消" QuickAccess="False" />
+      <Action Id="CancelAction" Caption="取消" />
+      <Action Id="Close" Caption="关闭" />
+      <Action Id="Delete" Caption="删除" />
+      <Action Id="EditModel" Caption="编辑模板" />
+      <Action Id="EditReportControllerV2.Edit" Caption="编辑" />
+      <Action Id="Exit" Caption="退出" />
+      <Action Id="Logoff" Caption="退出" ShortCaption="退出" />
+      <Action Id="Logon" Caption="登录" ShortCaption="Login" />
+      <Action Id="New" Caption="新建" />
+      <Action Id="NextObject" Caption="下一条" />
+      <Action Id="OpenObject" Caption="打开关联记录" />
+      <Action Id="PreviousObject" Caption="上一条" />
+      <Action Id="Refresh" Caption="刷新" />
+      <Action Id="ResetViewSettings" Caption="重置视图" />
+      <Action Id="SaveAndClose" Caption="保存并关闭" />
+      <Action Id="SaveAndNew" Caption="保存并新建" />
+      <Action Id="ShowAllContexts" Caption="验证" />
+      <Action Id="simpleAction" ImageName="BO_Validation" />
+    </Actions>
+    <ActionToContainerMapping>
+      <ActionContainer Id="About" Caption="关于" />
+      <ActionContainer Id="Close" Caption="关闭" />
+      <ActionContainer Id="Edit" Caption="编辑" />
+      <ActionContainer Id="Exit" Caption="退出" />
+      <ActionContainer Id="Export" Caption="导出" />
+      <ActionContainer Id="Filters" Caption="过滤" />
+      <ActionContainer Id="FullTextSearch" Caption="全文查找" />
+      <ActionContainer Id="Link" Caption="链接" />
+      <ActionContainer Id="ListView" Caption="列表" />
+      <ActionContainer Id="Menu" Caption="菜单" />
+      <ActionContainer Id="Notifications" Caption="通告" />
+      <ActionContainer Id="OpenObject" Caption="打开目标" />
+      <ActionContainer Id="Print" Caption="打印" />
+      <ActionContainer Id="RefreshNotifications" Caption="刷新通知" />
+      <ActionContainer Id="Reports" Caption="报表" />
+      <ActionContainer Id="Save" Caption="保存" />
+      <ActionContainer Id="Security" Caption="安全" />
+      <ActionContainer Id="Tools" Caption="工具" />
+    </ActionToContainerMapping>
+  </ActionDesign>
+  <NavigationItems NavigationStyle="Accordion" ShowImages="True" DefaultChildItemsDisplayStyle="List">
+    <Items>
+      <Item Id="客户信息管理" ImageName="BO_Folder" Index="1">
+        <Items>
+          <Item Id="CustomerCompanyType_ListView" ImageName="BO_Category" Index="1" />
+          <Item Id="CustomerCompany_ListView" ImageName="BO_Contract" Index="2" />
+          <Item Id="Customer_ListView" ImageName="BO_Customer" Index="3" />
+        </Items>
+      </Item>
+      <Item Id="项目管理" Index="2">
+        <Items>
+          <Item Id="PresellProject_ListView" Index="1" />
+          <Item Id="SellProject_ListView" ViewId="SellProject_ListView" Index="2" IsNewNode="True" Removed="True" />
+          <Item Id="AddProject_ListView" Index="3" />
+          <Item Id="ProjectProgress_ListView" Index="4" />
+        </Items>
+      </Item>
+      <Item Id="销售管理" Index="3">
+        <Items>
+          <Item Id="OrderType_ListView" Index="1" Visible="False" />
+          <Item Id="Order_ListView" Index="2" />
+          <Item Id="InvoiceReceipt_ListView" Index="3" />
+          <Item Id="Dutye_ListView" Visible="False" />
+          <Item Id="PayInvoiceDetail_ListView" Visible="False" />
+        </Items>
+      </Item>
+      <Item Id="客户服务管理" Visible="False" Index="4" />
+      <Item Id="Reports" Visible="True" Index="5" />
+      <Item Id="系统管理" ImageName="ChartType_AreaStepStacked" Index="6">
+        <Items>
+          <Item Id="Department_ListView" ImageName="BO_Department" QuickAccessItem="True" />
+          <Item Id="MyDetails" Visible="False" />
+          <Item Id="Position_ListView" Visible="False" />
+          <Item Id="Section_ListView" Visible="False" />
+        </Items>
+      </Item>
+      <Item Id="Default" Visible="False">
+        <Items>
+          <Item Id="PDFFile_ListView" Visible="False" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options UIType="TabbedMDI" FormStyle="Ribbon" ShowTabImage="False">
+    <LayoutManagerOptions EnableLayoutGroupImages="False" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SchedulerModuleBase" Version="20.1.3.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerWindowsFormsModule" Version="20.1.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="20.1.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="20.1.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="AddProject_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="AddProject" RelativeSize="100">
+              <LayoutGroup Id="AddProject_col1" RelativeSize="49.638554216867469">
+                <LayoutItem Id="SpCode" RelativeSize="4.382470119521912" Index="0" />
+                <LayoutItem Id="OrderTp" RelativeSize="3.1872509960159361" Index="1" />
+                <LayoutItem Id="AddCode" RelativeSize="3.1872509960159361" Index="2" />
+                <LayoutItem Id="APName" Index="3" RelativeSize="89.243027888446221" />
+                <LayoutItem Id="CCpName" RelativeSize="23.913043478260871" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="AddProject_col2" RelativeSize="50.361445783132531">
+                <LayoutItem Id="CCpName" ViewItem="CCpName" Index="0" RelativeSize="4.382470119521912" IsNewNode="True" />
+                <LayoutItem Id="AddDate" RelativeSize="3.1872509960159361" Index="1" />
+                <LayoutItem Id="APrincipal" RelativeSize="3.1872509960159361" Index="2" />
+                <LayoutItem Id="APhone" ViewItem="APhone" Index="3" RelativeSize="89.243027888446221" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="CNName" Removed="True" />
+                <LayoutItem Id="SysUser" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="81.030150753768851" Caption="项目描述" Removed="True">
+            <LayoutItem Id="Item1" Index="1" RelativeSize="79.844961240310084" IsNewNode="True" />
+            <LayoutItem Id="Description" RelativeSize="20.155038759689923" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="AddProject_ListView">
+      <Columns>
+        <ColumnInfo Id="CNName" Index="-1" />
+        <ColumnInfo Id="SysUser" SortIndex="1" SortOrder="Ascending" Index="-1" />
+        <ColumnInfo Id="SpCode" Index="0" Width="68" />
+        <ColumnInfo Id="AddCode" SortIndex="-1" SortOrder="None" Width="92" Index="1" />
+        <ColumnInfo Id="OrderTp" Index="2" Width="68" />
+        <ColumnInfo Id="APName" Index="3" Width="92" />
+        <ColumnInfo Id="CCpName" Index="4" Width="92" />
+        <ColumnInfo Id="AddDate" Index="5" Width="68" />
+        <ColumnInfo Id="APrincipal" Index="6" Width="71" />
+        <ColumnInfo Id="APhone" Index="7" Width="68" />
+      </Columns>
+    </ListView>
+    <DetailView Id="AuthenticationStandardLogonParameters_DetailView">
+      <Items>
+        <StaticImage Id="LogonImage" ImageName="BO_Localization" />
+        <StaticText Id="LogonText" Text="欢迎光临!请在下面输入您的用户名和密码。" />
+        <PropertyEditor Id="Password" Caption="登录密码" />
+        <PropertyEditor Id="UserName" Caption="用户名" />
+      </Items>
+    </DetailView>
+    <ListView Id="ChangePasswordOnLogonParameters_ListView">
+      <Columns>
+        <ColumnInfo Id="NewPassword" Width="84" />
+      </Columns>
+    </ListView>
+    <ListView Id="Company_ChangeHistory_ListView">
+      <Columns>
+        <ColumnInfo Id="Description" Caption="描述" />
+        <ColumnInfo Id="NewValue" Caption="新命名" />
+        <ColumnInfo Id="OldValue" Caption="原命名" />
+        <ColumnInfo Id="UserName" SortOrder="Ascending" Caption="用户名" />
+        <ColumnInfo Id="OperationType" Caption="操作方式" />
+        <ColumnInfo Id="PropertyName" Caption="属性名" />
+      </Columns>
+    </ListView>
+    <ListView Id="Company_Departments_ListView">
+      <Columns>
+        <ColumnInfo Id="Oid" Width="82" />
+        <ColumnInfo Id="Name" Width="81" />
+        <ColumnInfo Id="Number" Width="68" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Company_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="7.2727272727272725">
+            <LayoutGroup Id="Company" RelativeSize="100">
+              <LayoutItem Id="Name" RelativeSize="50" />
+              <LayoutItem Id="Number" RelativeSize="50" />
+              <LayoutItem Id="Telephone" Index="2" RelativeSize="35.227272727272727" Removed="True" />
+              <LayoutItem Id="Address" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="92.727272727272734">
+            <LayoutGroup Id="Departments" TextAlignMode="AlignWithChildren" RelativeSize="100">
+              <LayoutItem Id="Departments" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="SysUsers" TextAlignMode="AlignWithChildren" RelativeSize="100">
+              <LayoutItem Id="SysUsers" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Company_ListView">
+      <Columns>
+        <ColumnInfo Id="Address" SortIndex="-1" SortOrder="None" Index="-1" />
+        <ColumnInfo Id="Telephone" SortIndex="0" SortOrder="Ascending" Index="-1" />
+        <ColumnInfo Id="Name" SortIndex="-1" SortOrder="None" Width="68" />
+        <ColumnInfo Id="Number" Width="68" />
+      </Columns>
+    </ListView>
+    <ListView Id="Company_SysUsers_ListView">
+      <Columns>
+        <ColumnInfo Id="Address" Index="-1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="ApplyStaffId" Index="-1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="Birthday" Index="-1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="Comment" Index="-1" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="OpenID" Index="-1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="Position" Index="-1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="Section" SortIndex="-1" SortOrder="None" Index="-1" />
+        <ColumnInfo Id="UnionID" Index="-1" />
+        <ColumnInfo Id="FullName" Width="68" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="IsActive" Width="68" />
+        <ColumnInfo Id="UserName" Width="0" />
+        <ColumnInfo Id="ChangePasswordOnFirstLogon" Width="152" />
+        <ColumnInfo Id="Department" Width="86" />
+        <ColumnInfo Id="Email" Index="5" Width="47" />
+        <ColumnInfo Id="Telephone" Index="6" Width="79" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Customer_DetailView">
+      <Items>
+        <PropertyEditor Id="Interest" RowCount="2" MaxLength="0" />
+        <PropertyEditor Id="Remark" MaxLength="0" RowCount="2" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" ShowCaption="False" Index="0" RelativeSize="20.787207872078721" IsNewNode="True" Removed="True">
+            <LayoutGroup Id="Customer" ShowCaption="True" Direction="Horizontal" Index="0" RelativeSize="100" IsNewNode="True">
+              <LayoutGroup Id="Customer_col1" ShowCaption="False" Index="0" RelativeSize="61.163895486935864" IsNewNode="True">
+                <LayoutItem Id="Name" ViewItem="Name" Index="0" RelativeSize="25.78125" IsNewNode="True" />
+                <LayoutGroup Id="Autoef388f2c-a226-43d8-bfc4-25497a13ff2a" ShowCaption="False" Caption="Autoef388f2c-a226-43d8-bfc4-25497a13ff2a(6)" Direction="Horizontal" Index="1" RelativeSize="29.6875" IsNewNode="True">
+                  <LayoutItem Id="CSex" ViewItem="CSex" Index="0" RelativeSize="49.320388349514566" IsNewNode="True" />
+                  <LayoutItem Id="Origo" ViewItem="Origo" Index="1" RelativeSize="50.679611650485434" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="Position" ViewItem="Position" Index="2" RelativeSize="18.75" IsNewNode="True" />
+                <LayoutItem Id="CustomerCompany" ViewItem="CustomerCompany" Index="3" RelativeSize="25.78125" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Customer_col2" ShowCaption="False" Index="1" RelativeSize="38.836104513064136" IsNewNode="True">
+                <LayoutItem Id="Phone1" ViewItem="Phone1" Index="0" RelativeSize="25.78125" IsNewNode="True" />
+                <LayoutItem Id="Phone2" ViewItem="Phone2" Index="1" RelativeSize="18.75" IsNewNode="True" />
+                <LayoutItem Id="Adress" ViewItem="Adress" Index="2" RelativeSize="18.75" IsNewNode="True" />
+                <LayoutItem Id="E_mail" ViewItem="E_mail" Index="3" RelativeSize="36.71875" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutItem Id="Interest" ViewItem="Interest" Index="1" RelativeSize="14.760147601476016" IsNewNode="True" />
+          <LayoutItem Id="Remark" ViewItem="Remark" Index="2" RelativeSize="12.423124231242312" IsNewNode="True" />
+          <LayoutGroup Id="SizeableEditors" RelativeSize="52.02952029520295" Caption="SizeableEditors" Index="3">
+            <LayoutItem Id="Remark" RelativeSize="100" Index="0" Removed="True" />
+            <LayoutItem Id="Interest" RelativeSize="49.81818181818182" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Customer_ListView">
+      <Columns>
+        <ColumnInfo Id="SysUser" SortIndex="0" SortOrder="Ascending" Index="-1" />
+        <ColumnInfo Id="Name" Width="68" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="CSex" Width="68" />
+        <ColumnInfo Id="Position" Width="68" />
+        <ColumnInfo Id="Phone1" Width="0" />
+        <ColumnInfo Id="Phone2" Width="0" />
+        <ColumnInfo Id="Adress" Width="56" />
+        <ColumnInfo Id="Origo" Width="49" />
+        <ColumnInfo Id="E_mail" Width="54" />
+        <ColumnInfo Id="CustomerCompany" Width="122" />
+      </Columns>
+    </ListView>
+    <ListView Id="CustomerCompany_AddProjects_ListView">
+      <Columns>
+        <ColumnInfo Id="AddCode" Index="-1" SortIndex="-1" SortOrder="None" Removed="True" />
+        <ColumnInfo Id="CNName" Index="-1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="SpCode" Index="0" Width="81" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="OrderTp" Index="1" Width="68" />
+        <ColumnInfo Id="APName" Index="2" Width="92" />
+        <ColumnInfo Id="AddDate" Index="3" Width="68" />
+        <ColumnInfo Id="APrincipal" Index="4" Width="71" />
+        <ColumnInfo Id="APhone" Index="5" Width="68" />
+        <ColumnInfo Id="SysUser" Index="6" Width="66" />
+      </Columns>
+      <HiddenActions>
+        <ActionLink ActionId="Delete" IsNewNode="True" />
+        <ActionLink ActionId="Link" IsNewNode="True" />
+        <ActionLink ActionId="Unlink" IsNewNode="True" />
+      </HiddenActions>
+    </ListView>
+    <ListView Id="CustomerCompany_ChangeHistory_ListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Width="92" />
+        <ColumnInfo Id="ModifiedOn" Width="85" />
+        <ColumnInfo Id="OperationType" Width="106" />
+        <ColumnInfo Id="PropertyName" Width="102" />
+      </Columns>
+    </ListView>
+    <ListView Id="CustomerCompany_Customers_ListView">
+      <Columns>
+        <ColumnInfo Id="CSex" Width="92" SortIndex="-1" SortOrder="None" Index="-1" />
+        <ColumnInfo Id="CustomerCompany" Width="166" />
+        <ColumnInfo Id="Interest" Width="153" />
+        <ColumnInfo Id="Oid" Width="153" />
+        <ColumnInfo Id="Remark" Width="153" />
+        <ColumnInfo Id="SysUser" Width="96" Index="-1" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="Name" Width="68" SortOrder="None" SortIndex="-1" />
+        <ColumnInfo Id="Position" Width="68" Index="1" />
+        <ColumnInfo Id="Phone1" Width="0" Index="2" />
+        <ColumnInfo Id="Phone2" Width="0" Index="3" />
+        <ColumnInfo Id="Adress" Width="56" Index="4" />
+        <ColumnInfo Id="Origo" Width="49" Index="5" />
+        <ColumnInfo Id="E_mail" Width="54" Index="6" />
+      </Columns>
+      <HiddenActions>
+        <ActionLink ActionId="Delete" IsNewNode="True" />
+        <ActionLink ActionId="Link" IsNewNode="True" />
+        <ActionLink ActionId="Unlink" IsNewNode="True" />
+      </HiddenActions>
+    </ListView>
+    <DetailView Id="CustomerCompany_DetailView">
+      <HiddenActions>
+        <ActionLink ActionId="simpleAction" IsNewNode="True" />
+      </HiddenActions>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="16.843501326259947">
+            <LayoutGroup Id="CustomerCompany" RelativeSize="100">
+              <LayoutGroup Id="CustomerCompany_col1" RelativeSize="49.756690997566913">
+                <LayoutItem Id="CPName" RelativeSize="36.666666666666664" />
+                <LayoutItem Id="legalMan" RelativeSize="26.666666666666668" />
+                <LayoutItem Id="Address" RelativeSize="36.666666666666664" />
+                <LayoutItem Id="RegisteredFund" RelativeSize="28.94736842105263" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="CustomerCompany_col2" RelativeSize="50.243309002433087">
+                <LayoutItem Id="ReiestDate" RelativeSize="36.666666666666664" />
+                <LayoutItem Id="CompanyType" RelativeSize="26.666666666666668" />
+                <LayoutItem Id="RegisteredFund" ViewItem="RegisteredFund" Index="2" RelativeSize="36.666666666666664" IsNewNode="True" />
+                <LayoutItem Id="SysUser" ViewItem="SysUser" Index="3" RelativeSize="28.94736842105263" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="39.257294429708224">
+            <LayoutItem Id="Introduce" RelativeSize="35.472972972972975" />
+            <LayoutItem Id="Scope" RelativeSize="36.486486486486484" />
+            <LayoutItem Id="Remark" RelativeSize="28.04054054054054" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" Index="2" RelativeSize="43.899204244031829" IsNewNode="True" Removed="True">
+            <LayoutGroup Id="Customers" ShowCaption="True" Caption="所有员工信息" TextAlignMode="AlignWithChildren" Index="0" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="Customers" TextAlignMode="AutoSize" ViewItem="Customers" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="PDFFiles" ShowCaption="True" Caption="附件上传" TextAlignMode="AlignWithChildren" Index="1" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="PDFFiles" TextAlignMode="AutoSize" ViewItem="PDFFiles" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="ChangeHistory" ShowCaption="True" Caption="更改记录" TextAlignMode="AlignWithChildren" Index="2" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="ChangeHistory" TextAlignMode="AutoSize" ViewItem="ChangeHistory" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="SellProjects" ShowCaption="True" Caption="所有立项项目" TextAlignMode="AlignWithChildren" Index="3" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="SellProjects" TextAlignMode="AutoSize" ViewItem="SellProjects" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="AddProjects" ShowCaption="True" Caption="所有增补项目" TextAlignMode="AlignWithChildren" Index="4" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="AddProjects" TextAlignMode="AutoSize" ViewItem="AddProjects" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="CustomerCompany_HistoryTrails_ListView">
+      <Columns>
+        <ColumnInfo Id="CustomerCompany" Width="82" />
+        <ColumnInfo Id="EditIntroduce" Width="82" />
+        <ColumnInfo Id="EditScope" Width="0" SortIndex="0" SortOrder="Ascending" Index="-1" />
+        <ColumnInfo Id="Oid" Width="82" />
+        <ColumnInfo Id="EditTime" Width="68" Index="0" />
+        <ColumnInfo Id="EditName" Width="72" SortIndex="-1" SortOrder="None" Index="1" />
+        <ColumnInfo Id="EditAddress" Width="84" Index="2" />
+        <ColumnInfo Id="EditlegalMan" Width="87" Index="3" />
+        <ColumnInfo Id="EditReiestDate" Width="68" Index="4" />
+        <ColumnInfo Id="EditRegisteredFund" Width="90" Index="5" />
+        <ColumnInfo Id="CompanyType" Width="98" Index="6" />
+        <ColumnInfo Id="EditRemark" Width="81" Index="7" />
+      </Columns>
+    </ListView>
+    <ListView Id="CustomerCompany_ListView">
+      <Columns>
+        <ColumnInfo Id="SysUser" Width="62" Index="-1" />
+        <ColumnInfo Id="CPName" Width="81" SortOrder="Descending" />
+        <ColumnInfo Id="legalMan" Width="80" />
+        <ColumnInfo Id="Address" Width="68" />
+        <ColumnInfo Id="RegisteredFund" Width="90" />
+        <ColumnInfo Id="ReiestDate" Width="68" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="CompanyType" Width="98" />
+      </Columns>
+      <HiddenActions>
+        <ActionLink ActionId="SaveAndClose" IsNewNode="True" />
+        <ActionLink ActionId="SaveAndNew" IsNewNode="True" />
+      </HiddenActions>
+    </ListView>
+    <ListView Id="CustomerCompany_LookupListView">
+      <Columns>
+        <ColumnInfo Id="CPName" Width="81" />
+      </Columns>
+      <HiddenActions>
+        <ActionLink ActionId="SaveAndClose" IsNewNode="True" />
+        <ActionLink ActionId="SaveAndNew" IsNewNode="True" />
+      </HiddenActions>
+    </ListView>
+    <ListView Id="CustomerCompany_PDFFiles_ListView" IsGroupPanelVisible="True">
+      <Columns>
+        <ColumnInfo Id="Order" Width="78" SortIndex="0" SortOrder="Ascending" Index="-1" />
+        <ColumnInfo Id="File" SortIndex="-1" SortOrder="None" Width="37" />
+        <ColumnInfo Id="PDFName" SortIndex="-1" SortOrder="None" Index="1" Width="72" />
+        <ColumnInfo Id="CustomerCompany" Removed="True" />
+        <ColumnInfo Id="Oid" Removed="True" />
+      </Columns>
+      <HiddenActions>
+        <ActionLink ActionId="Link" IsNewNode="True" />
+        <ActionLink ActionId="Unlink" IsNewNode="True" />
+      </HiddenActions>
+    </ListView>
+    <ListView Id="CustomerCompany_SellProjects_ListView">
+      <Columns>
+        <ColumnInfo Id="CNName" Index="-1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="PspSpCode" Width="81" Index="0" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="OrderType" Width="79" Index="1" />
+        <ColumnInfo Id="Code" SortOrder="None" Width="68" SortIndex="-1" Index="2" />
+        <ColumnInfo Id="SPName" Width="68" Index="3" />
+        <ColumnInfo Id="SpDate" Width="68" Index="4" />
+        <ColumnInfo Id="SPrincipal" Index="5" />
+        <ColumnInfo Id="SPhone" Width="68" Index="6" />
+        <ColumnInfo Id="SysUser" Width="66" Index="7" />
+      </Columns>
+      <HiddenActions>
+        <ActionLink ActionId="Delete" IsNewNode="True" />
+        <ActionLink ActionId="Link" IsNewNode="True" />
+        <ActionLink ActionId="Unlink" IsNewNode="True" />
+      </HiddenActions>
+    </ListView>
+    <ListView Id="CustomerCompanyType_ChangeHistory_ListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Width="92" />
+        <ColumnInfo Id="ModifiedOn" Width="85" />
+        <ColumnInfo Id="OperationType" Width="106" />
+        <ColumnInfo Id="PropertyName" Width="102" />
+      </Columns>
+    </ListView>
+    <ListView Id="CustomerCompanyType_CustomerCompanies_ListView">
+      <Columns>
+        <ColumnInfo Id="CompanyType" Width="114" />
+        <ColumnInfo Id="Introduce" Width="96" />
+        <ColumnInfo Id="Oid" Width="96" />
+        <ColumnInfo Id="Remark" Width="96" />
+        <ColumnInfo Id="Scope" Width="96" />
+        <ColumnInfo Id="SysUser" Width="62" Index="-1" />
+        <ColumnInfo Id="CPName" Width="81" />
+        <ColumnInfo Id="legalMan" Width="80" />
+        <ColumnInfo Id="Address" Width="68" />
+        <ColumnInfo Id="RegisteredFund" Width="90" />
+        <ColumnInfo Id="ReiestDate" Width="68" />
+      </Columns>
+      <HiddenActions>
+        <ActionLink ActionId="Delete" IsNewNode="True" />
+        <ActionLink ActionId="Link" IsNewNode="True" />
+        <ActionLink ActionId="Unlink" IsNewNode="True" />
+      </HiddenActions>
+    </ListView>
+    <ListView Id="CustomerCompanyType_ListView">
+      <Columns>
+        <ColumnInfo Id="CptCode" Width="92" Index="0" />
+        <ColumnInfo Id="CptName" Width="105" />
+      </Columns>
+    </ListView>
+    <DetailView Id="CustomerComplaint_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="CustomerComplaint" RelativeSize="18.070818070818071">
+              <LayoutGroup Id="CustomerComplaint_col1" RelativeSize="49.950932286555449">
+                <LayoutItem Id="CCpName" RelativeSize="27.826086956521738" />
+                <LayoutItem Id="Name" RelativeSize="20.869565217391305" />
+                <LayoutItem Id="Sex" RelativeSize="20.869565217391305" />
+                <LayoutItem Id="Position" RelativeSize="30.434782608695652" />
+              </LayoutGroup>
+              <LayoutGroup Id="CustomerComplaint_col2" RelativeSize="50.049067713444551">
+                <LayoutItem Id="Phone1" RelativeSize="27.826086956521738" />
+                <LayoutItem Id="Phone2" ViewItem="Phone2" Index="1" RelativeSize="20.869565217391305" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="E_mail" RelativeSize="51.304347826086953" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutItem Id="Content" ViewItem="Content" Index="1" RelativeSize="32.234432234432234" IsNewNode="True" />
+            <LayoutGroup Id="SizeableEditors" ShowCaption="False" Caption="投诉内容" Index="2" RelativeSize="49.694749694749696" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="81.562881562881557" Removed="True">
+            <LayoutItem Id="Content" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="CustomerComplaint_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Width="81" SortOrder="Descending" />
+        <ColumnInfo Id="CCpName" Width="92" />
+        <ColumnInfo Id="Sex" Width="44" />
+        <ColumnInfo Id="Position" Width="68" />
+        <ColumnInfo Id="Phone1" Width="68" />
+        <ColumnInfo Id="Phone2" Width="68" />
+        <ColumnInfo Id="E_mail" Width="54" />
+      </Columns>
+    </ListView>
+    <ListView Id="CustomerComplaint_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Width="81" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Department_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="10.181818181818182">
+            <LayoutGroup Id="Department" RelativeSize="100">
+              <LayoutItem Id="Company" RelativeSize="36.904761904761905" />
+              <LayoutItem Id="Name" RelativeSize="27.38095238095238" />
+              <LayoutItem Id="Number" RelativeSize="35.714285714285715" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="89.818181818181813">
+            <LayoutGroup Id="SysUsers" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="1">
+              <LayoutItem Id="SysUsers" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Sections" Removed="True" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Department_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Width="81" />
+        <ColumnInfo Id="Number" Width="68" />
+      </Columns>
+    </ListView>
+    <ListView Id="Department_Sections_ListView">
+      <Columns>
+        <ColumnInfo Id="Department" Width="92" />
+        <ColumnInfo Id="Name" Width="81" />
+        <ColumnInfo Id="Company" Width="92" />
+        <ColumnInfo Id="Number" Width="68" />
+      </Columns>
+    </ListView>
+    <ListView Id="Department_SysUsers_ListView">
+      <Columns>
+        <ColumnInfo Id="Address" Width="96" Index="-1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="ApplyStaffId" Width="96" Index="-1" />
+        <ColumnInfo Id="Comment" Width="96" Index="-1" />
+        <ColumnInfo Id="Company" Width="96" SortIndex="-1" SortOrder="None" Index="-1" />
+        <ColumnInfo Id="Department" Width="86" />
+        <ColumnInfo Id="Oid" Width="96" />
+        <ColumnInfo Id="OpenID" Width="96" Index="-1" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="Position" Width="96" Index="-1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="Section" Width="96" SortIndex="-1" SortOrder="None" Index="-1" />
+        <ColumnInfo Id="UnionID" Width="96" Index="-1" />
+        <ColumnInfo Id="FullName" Width="68" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="IsActive" Width="68" />
+        <ColumnInfo Id="UserName" Width="0" />
+        <ColumnInfo Id="ChangePasswordOnFirstLogon" Width="152" />
+        <ColumnInfo Id="Email" Width="47" Index="4" />
+        <ColumnInfo Id="Telephone" Width="79" Index="5" />
+        <ColumnInfo Id="Birthday" Width="68" Index="6" />
+      </Columns>
+    </ListView>
+    <ListView Id="FieldService_FSPDFFiles_ListView">
+      <Columns>
+        <ColumnInfo Id="FieldService" Width="82" />
+        <ColumnInfo Id="File" Width="467" Index="-1" />
+        <ColumnInfo Id="Oid" Width="82" />
+        <ColumnInfo Id="PDFName" Width="77" Index="0" />
+      </Columns>
+    </ListView>
+    <ListView Id="FieldService_ListView">
+      <Columns>
+        <ColumnInfo Id="CCpName" Width="72" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="SysName" Width="69" />
+        <ColumnInfo Id="Contacts" Width="68" />
+        <ColumnInfo Id="EnterDate" Width="68" />
+        <ColumnInfo Id="Phone" Width="80" />
+        <ColumnInfo Id="OutDate" Width="68" />
+        <ColumnInfo Id="RState" Width="105" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="EGrade" Width="68" />
+      </Columns>
+    </ListView>
+    <ListView Id="HistoryTrail_ListView">
+      <Columns>
+        <ColumnInfo Id="EditName" Width="81" />
+        <ColumnInfo Id="CustomerCompany" Width="122" />
+        <ColumnInfo Id="EditTime" Width="68" />
+        <ColumnInfo Id="EditlegalMan" Width="87" />
+        <ColumnInfo Id="EditAddress" Width="84" />
+        <ColumnInfo Id="EditRegisteredFund" Width="90" />
+        <ColumnInfo Id="EditReiestDate" Width="68" />
+        <ColumnInfo Id="CompanyType" Width="98" />
+      </Columns>
+    </ListView>
+    <DetailView Id="InvoiceReceipt_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="18.969849246231156">
+            <LayoutGroup Id="InvoiceReceipt" RelativeSize="100">
+              <LayoutGroup Id="InvoiceReceipt_col1" RelativeSize="49.764705882352942">
+                <LayoutItem Id="OrderCode" RelativeSize="28.94736842105263" />
+                <LayoutItem Id="CCpName" RelativeSize="21.05263157894737" />
+                <LayoutItem Id="sPCode" RelativeSize="21.05263157894737" />
+                <LayoutItem Id="AddProject" Index="3" RelativeSize="28.94736842105263" />
+                <LayoutItem Id="Address" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="InvoiceReceipt_col2" RelativeSize="50.235294117647058">
+                <LayoutItem Id="Address" ViewItem="Address" Index="0" RelativeSize="28.94736842105263" IsNewNode="True" />
+                <LayoutItem Id="Tax_OMoney" Index="1" RelativeSize="21.05263157894737" />
+                <LayoutItem Id="ODuty" Index="2" RelativeSize="21.05263157894737" />
+                <LayoutItem Id="OMoney" Index="3" RelativeSize="28.94736842105263" />
+                <LayoutItem Id="SysUser" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="15.829145728643216">
+            <LayoutItem Id="PayDetail" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="PayInvoiceDetails_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="65.201005025125625">
+            <LayoutItem Id="PayInvoiceDetails" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="InvoiceReceipt_ListView">
+      <Columns>
+        <ColumnInfo Id="SysUser" Width="66" Index="-1" />
+        <ColumnInfo Id="OrderCode" Width="79" Index="0" />
+        <ColumnInfo Id="sPCode" Width="68" Index="1" />
+        <ColumnInfo Id="AddProject" Width="81" Index="2" />
+        <ColumnInfo Id="CCpName" Width="81" Index="3" />
+        <ColumnInfo Id="Address" Width="63" />
+        <ColumnInfo Id="ODuty" Width="55" />
+        <ColumnInfo Id="OMoney" Width="121" />
+        <ColumnInfo Id="Tax_OMoney" Width="109" />
+      </Columns>
+    </ListView>
+    <ListView Id="InvoiceReceipt_PayInvoiceDetails_ListView">
+      <Columns>
+        <ColumnInfo Id="IsInvoiceMoney" Width="0" SortIndex="0" SortOrder="Ascending" Index="-1" />
+        <ColumnInfo Id="IsInvoiceRatio" Width="95" Index="-1" />
+        <ColumnInfo Id="ReceiptsMoney" Width="0" Index="-1" />
+        <ColumnInfo Id="ReceiptsRatio" Width="93" Index="-1" />
+        <ColumnInfo Id="Tts" Width="68" />
+        <ColumnInfo Id="PayRatio" Width="80" />
+        <ColumnInfo Id="InvoiceMoney" Width="0" />
+        <ColumnInfo Id="PlanTime" Width="92" />
+        <ColumnInfo Id="RealTime" Width="92" />
+        <ColumnInfo Id="InvoiceCode" Width="87" />
+        <ColumnInfo Id="PlanReceiptsTime" Width="92" Index="6" />
+        <ColumnInfo Id="RealReceiptsTime" Width="92" Index="7" />
+      </Columns>
+      <HiddenActions>
+        <ActionLink ActionId="Delete" IsNewNode="True" />
+        <ActionLink ActionId="Link" IsNewNode="True" />
+        <ActionLink ActionId="Unlink" IsNewNode="True" />
+      </HiddenActions>
+    </ListView>
+    <DetailView Id="OperationService_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="10.744810744810744">
+            <LayoutGroup Id="OperationService" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="25.763125763125764">
+            <LayoutItem Id="Description" RelativeSize="49.763033175355453" />
+            <LayoutItem Id="Solution" RelativeSize="50.236966824644547" />
+          </LayoutGroup>
+          <LayoutGroup Id="Records_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="63.492063492063494">
+            <LayoutItem Id="Records" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="OperationService_ListView">
+      <Columns>
+        <ColumnInfo Id="CName" Width="151" />
+        <ColumnInfo Id="HappenDate" Width="92" />
+        <ColumnInfo Id="PassMd" Width="92" />
+      </Columns>
+    </ListView>
+    <ListView Id="Order_ChangeHistory_ListView">
+      <Columns>
+        <ColumnInfo Id="Description" Width="82" />
+        <ColumnInfo Id="NewValue" Width="82" />
+        <ColumnInfo Id="Oid" Width="82" />
+        <ColumnInfo Id="OldValue" Width="82" />
+        <ColumnInfo Id="UserName" Width="92" />
+        <ColumnInfo Id="ModifiedOn" Width="85" />
+        <ColumnInfo Id="OperationType" Width="106" />
+        <ColumnInfo Id="PropertyName" Width="102" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Order_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="32.286432160804019">
+            <LayoutGroup Id="Order" RelativeSize="76.264591439688715">
+              <LayoutGroup Id="Order_col1" RelativeSize="49.294117647058826">
+                <LayoutItem Id="Code" RelativeSize="20.37037037037037" />
+                <LayoutItem Id="OName" RelativeSize="14.814814814814815" />
+                <LayoutItem Id="Tp" RelativeSize="14.814814814814815" Index="2" />
+                <LayoutItem Id="CpName" ViewItem="CpName" Index="3" RelativeSize="14.814814814814815" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="sPCode" RelativeSize="14.814814814814815" Index="4" />
+                <LayoutItem Id="AddProject" ViewItem="AddProject" Index="5" RelativeSize="20.37037037037037" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="sPName" Index="5" RelativeSize="21.472392638036808" Removed="True" />
+                <LayoutItem Id="COName" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Order_col2" RelativeSize="50.705882352941174">
+                <LayoutItem Id="CreateTime" ViewItem="CreateTime" Index="0" RelativeSize="20.37037037037037" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="aPName" RelativeSize="14.814814814814815" Index="1" Removed="True" />
+                <LayoutItem Id="Tax_Money" Index="1" RelativeSize="14.814814814814815" />
+                <LayoutItem Id="DutyGrade" RelativeSize="14.814814814814815" Index="2" />
+                <LayoutItem Id="Money" Index="3" RelativeSize="14.814814814814815" />
+                <LayoutItem Id="Address" RelativeSize="35.185185185185183" Index="4" />
+                <LayoutItem Id="SysUser" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutItem Id="Payway" ViewItem="Payway" Index="1" RelativeSize="23.735408560311285" IsNewNode="True" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="67.713567839195974" Index="1">
+            <LayoutGroup Id="ChangeHistory" TextAlignMode="AlignWithChildren" RelativeSize="100">
+              <LayoutItem Id="ChangeHistory" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="PDFFiles" TextAlignMode="AlignWithChildren" RelativeSize="100">
+              <LayoutItem Id="PDFFiles" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="付款方式" RelativeSize="3.2663316582914574" Removed="True">
+            <LayoutItem Id="Payway" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Order_ListView">
+      <Columns>
+        <ColumnInfo Id="aPName" Width="92" Index="-1" />
+        <ColumnInfo Id="COName" Width="128" SortIndex="0" SortOrder="Ascending" Index="-1" />
+        <ColumnInfo Id="OName" Width="81" SortIndex="-1" SortOrder="None" Index="-1" />
+        <ColumnInfo Id="sPName" Width="92" Index="-1" />
+        <ColumnInfo Id="SysUser" Width="66" Index="-1" />
+        <ColumnInfo Id="Code" Width="81" Index="0" SortIndex="1" SortOrder="Ascending" />
+        <ColumnInfo Id="Tp" Width="68" Index="1" />
+        <ColumnInfo Id="sPCode" Width="95" Index="2" />
+        <ColumnInfo Id="AddProject" Width="123" Index="3" />
+        <ColumnInfo Id="CpName" Width="68" Index="4" />
+        <ColumnInfo Id="Tax_Money" Width="85" Index="5" />
+        <ColumnInfo Id="CreateTime" Width="68" Index="6" />
+        <ColumnInfo Id="DutyGrade" Width="78" Index="7" />
+        <ColumnInfo Id="Money" Width="97" Index="8" />
+        <ColumnInfo Id="Address" Width="63" />
+      </Columns>
+    </ListView>
+    <ListView Id="Order_PDFFiles_ListView">
+      <Columns>
+        <ColumnInfo Id="CustomerCompany" SortIndex="-1" SortOrder="None" Index="-1" />
+        <ColumnInfo Id="Order" SortIndex="0" SortOrder="Ascending" Index="-1" />
+        <ColumnInfo Id="File" SortIndex="-1" SortOrder="None" Width="37" />
+        <ColumnInfo Id="PDFName" Index="1" Width="72" />
+      </Columns>
+      <HiddenActions>
+        <ActionLink ActionId="Link" IsNewNode="True" />
+        <ActionLink ActionId="Unlink" IsNewNode="True" />
+      </HiddenActions>
+    </ListView>
+    <ListView Id="OrderType_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Width="105" />
+        <ColumnInfo Id="Code" Width="92" />
+      </Columns>
+    </ListView>
+    <DetailView Id="PayInvoiceDetail_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="PayInvoiceDetail" RelativeSize="100">
+              <LayoutGroup Id="PayInvoiceDetail_col1" RelativeSize="50">
+                <LayoutItem Id="Tts" RelativeSize="4.382470119521912" />
+                <LayoutItem Id="PayRatio" RelativeSize="3.1872509960159361" />
+                <LayoutItem Id="InvoiceCode" RelativeSize="3.1872509960159361" Index="3" Removed="True" />
+                <LayoutItem Id="InvoiceMoney" RelativeSize="3.1872509960159361" />
+                <LayoutItem Id="PlanTime" RelativeSize="89.243027888446221" Index="3" />
+                <LayoutItem Id="RealTime" RelativeSize="86.055776892430274" Index="4" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="PayInvoiceDetail_col2" RelativeSize="50">
+                <LayoutItem Id="IsInvoiceRatio" Index="0" RelativeSize="4.382470119521912" Removed="True" />
+                <LayoutItem Id="RealTime" ViewItem="RealTime" Index="0" RelativeSize="4.382470119521912" IsNewNode="True" />
+                <LayoutItem Id="InvoiceCode" ViewItem="InvoiceCode" Index="1" RelativeSize="3.1872509960159361" IsNewNode="True" />
+                <LayoutItem Id="PlanReceiptsTime" Index="2" RelativeSize="3.1872509960159361" />
+                <LayoutItem Id="ReceiptsMoney" Index="2" RelativeSize="3.1872509960159361" Removed="True" />
+                <LayoutItem Id="ReceiptsRatio" Index="2" RelativeSize="92.430278884462155" Removed="True" />
+                <LayoutItem Id="RealReceiptsTime" Index="3" RelativeSize="89.243027888446221" />
+                <LayoutItem Id="IsInvoiceMoney" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="PayInvoiceDetail_ListView">
+      <Columns>
+        <ColumnInfo Id="Tts" Width="68" />
+        <ColumnInfo Id="PayRatio" Width="80" />
+        <ColumnInfo Id="InvoiceMoney" Width="0" />
+        <ColumnInfo Id="PlanTime" Width="92" />
+        <ColumnInfo Id="RealTime" Width="92" />
+        <ColumnInfo Id="InvoiceCode" Width="87" />
+        <ColumnInfo Id="IsInvoiceMoney" Width="0" />
+        <ColumnInfo Id="IsInvoiceRatio" Width="95" />
+        <ColumnInfo Id="PlanReceiptsTime" Width="92" />
+        <ColumnInfo Id="RealReceiptsTime" Width="92" />
+        <ColumnInfo Id="ReceiptsMoney" Width="0" />
+        <ColumnInfo Id="ReceiptsRatio" Width="93" />
+      </Columns>
+    </ListView>
+    <DetailView Id="PDFFile_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="PDFFile" Caption="PDFFile" RelativeSize="4.5226130653266328">
+              <LayoutItem Id="PDFName" Index="0" RelativeSize="100" />
+              <LayoutItem Id="CustomerCompany" Removed="True" />
+              <LayoutItem Id="Order" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="FileAttachmentBase" RelativeSize="95.477386934673362">
+              <LayoutItem Id="File" RelativeSize="100" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="PDFFile_ListView">
+      <Columns>
+        <ColumnInfo Id="Order" Width="51" Index="-1" />
+        <ColumnInfo Id="CustomerCompany" Width="122" Index="0" />
+        <ColumnInfo Id="File" Width="50" Index="1" />
+        <ColumnInfo Id="PDFName" Width="72" />
+      </Columns>
+    </ListView>
+    <DetailView Id="PresellProject_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="16.457286432160803">
+            <LayoutGroup Id="PresellProject" RelativeSize="100">
+              <LayoutGroup Id="PresellProject_col1" RelativeSize="50">
+                <LayoutItem Id="Code" RelativeSize="36.666666666666664" />
+                <LayoutItem Id="PSName" RelativeSize="26.666666666666668" />
+                <LayoutItem Id="CCpName" RelativeSize="36.666666666666664" Index="2" />
+                <LayoutItem Id="Address" RelativeSize="28.94736842105263" Index="3" Removed="True" />
+                <LayoutItem Id="PSCName" RelativeSize="17.391304347826086" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="PresellProject_col2" RelativeSize="50">
+                <LayoutItem Id="CreateDate" RelativeSize="36.666666666666664" />
+                <LayoutItem Id="Principal" RelativeSize="26.666666666666668" />
+                <LayoutItem Id="Phone" RelativeSize="36.666666666666664" />
+                <LayoutItem Id="CreateTime" RelativeSize="41.304347826086953" Removed="True" />
+                <LayoutItem Id="SysUser" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SellProjects_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="83.5427135678392" Index="1">
+            <LayoutItem Id="SellProjects" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="40.452261306532662" Removed="True">
+            <LayoutItem Id="Description" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="PresellProject_ListView">
+      <Columns>
+        <ColumnInfo Id="CreateTime" Width="87" Index="-1" />
+        <ColumnInfo Id="PSCName" Index="-1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="SysUser" SortIndex="-1" SortOrder="None" Index="-1" />
+        <ColumnInfo Id="Code" Width="105" SortIndex="0" SortOrder="Ascending" Index="0" />
+        <ColumnInfo Id="PSName" Width="68" Index="1" />
+        <ColumnInfo Id="CCpName" Width="92" Index="2" />
+        <ColumnInfo Id="Address" Width="63" Index="3" />
+        <ColumnInfo Id="Principal" Width="63" Index="4" />
+        <ColumnInfo Id="Phone" Width="68" Index="6" />
+      </Columns>
+    </ListView>
+    <ListView Id="PresellProject_SellProjects_ListView">
+      <Columns>
+        <ColumnInfo Id="CNName" Width="124" SortIndex="-1" SortOrder="None" Index="-1" />
+        <ColumnInfo Id="Oid" Width="96" />
+        <ColumnInfo Id="OrderType" Width="96" SortIndex="0" SortOrder="Ascending" Index="-1" />
+        <ColumnInfo Id="PspSpCode" Width="96" />
+        <ColumnInfo Id="SpDescription" Width="96" />
+        <ColumnInfo Id="SysUser" Width="96" Index="-1" />
+        <ColumnInfo Id="Code" Width="96" Index="0" />
+        <ColumnInfo Id="SPName" Width="96" Index="1" />
+        <ColumnInfo Id="SpCCpName" Width="96" Index="2" />
+        <ColumnInfo Id="SpDate" Width="96" Index="3" />
+        <ColumnInfo Id="SPrincipal" Width="96" Index="4" />
+        <ColumnInfo Id="SPhone" Width="96" Index="5" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ProgressDetail_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="ProgressDetail" RelativeSize="100">
+              <LayoutGroup Id="ProgressDetail_col1" RelativeSize="50">
+                <LayoutItem Id="PlanDesignTime" Index="0" RelativeSize="4.382470119521912" />
+                <LayoutItem Id="RealDesignTime" Index="1" RelativeSize="3.1872509960159361" />
+                <LayoutItem Id="PlanSysTime" Index="2" RelativeSize="3.1872509960159361" />
+                <LayoutItem Id="RealSysTime" Index="3" RelativeSize="3.1872509960159361" />
+                <LayoutItem Id="PlanDebugTime" Index="4" RelativeSize="86.055776892430274" />
+                <LayoutItem Id="ProjectProgress" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ProgressDetail_col2" RelativeSize="50">
+                <LayoutItem Id="RealDebugTime" RelativeSize="4.382470119521912" />
+                <LayoutItem Id="PlanPlRunTime" RelativeSize="3.1872509960159361" />
+                <LayoutItem Id="RealPlRunTime" RelativeSize="3.1872509960159361" />
+                <LayoutItem Id="PlanTrainTime" RelativeSize="3.1872509960159361" />
+                <LayoutItem Id="RealTrainTime" RelativeSize="86.055776892430274" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ProgressDetail_ListView">
+      <Columns>
+        <ColumnInfo Id="ProjectProgress" Width="105" Index="-1" />
+        <ColumnInfo Id="PlanDesignTime" Width="116" Index="0" />
+        <ColumnInfo Id="RealDesignTime" Width="116" Index="1" />
+        <ColumnInfo Id="PlanSysTime" Width="116" Index="2" />
+        <ColumnInfo Id="RealSysTime" Width="116" Index="3" />
+        <ColumnInfo Id="PlanDebugTime" Width="116" Index="4" />
+        <ColumnInfo Id="RealDebugTime" Width="116" Index="5" />
+        <ColumnInfo Id="PlanPlRunTime" Width="104" Index="6" />
+        <ColumnInfo Id="RealPlRunTime" Width="104" Index="7" />
+        <ColumnInfo Id="PlanTrainTime" Width="92" Index="8" />
+        <ColumnInfo Id="RealTrainTime" Width="92" Index="9" />
+      </Columns>
+    </ListView>
+    <ListView Id="ProjectProgress_ChangeHistory_ListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Width="92" />
+        <ColumnInfo Id="ModifiedOn" Width="85" />
+        <ColumnInfo Id="OperationType" Width="106" />
+        <ColumnInfo Id="PropertyName" Width="102" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ProjectProgress_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="16.457286432160803">
+            <LayoutGroup Id="ProjectProgress" RelativeSize="100">
+              <LayoutGroup Id="ProjectProgress_col1" RelativeSize="49.411764705882355">
+                <LayoutItem Id="CCpName" RelativeSize="36.666666666666664" />
+                <LayoutItem Id="Tp" RelativeSize="26.666666666666668" Index="1" />
+                <LayoutItem Id="sPCode" Index="2" RelativeSize="36.666666666666664" />
+                <LayoutItem Id="AddProject" Index="3" RelativeSize="28.94736842105263" Removed="True" />
+                <LayoutItem Id="sPName" RelativeSize="3.0690537084398977" Index="3" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ProjectProgress_col2" RelativeSize="50.588235294117645">
+                <LayoutItem Id="AddProject" ViewItem="AddProject" Index="0" RelativeSize="36.666666666666664" IsNewNode="True" />
+                <LayoutItem Id="Address" Index="1" RelativeSize="26.666666666666668" />
+                <LayoutItem Id="StateName" Index="2" RelativeSize="36.666666666666664" />
+                <LayoutItem Id="aPName" Removed="True" />
+                <LayoutItem Id="SysUser" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="83.5427135678392">
+            <LayoutGroup Id="ProgressDetails" TextAlignMode="AlignWithChildren" RelativeSize="100">
+              <LayoutItem Id="ProgressDetails" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="ChangeHistory" TextAlignMode="AlignWithChildren" RelativeSize="100">
+              <LayoutItem Id="ChangeHistory" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ProjectProgress_ListView">
+      <Columns>
+        <ColumnInfo Id="aPName" Width="92" Index="-1" />
+        <ColumnInfo Id="sPName" Width="92" SortIndex="0" SortOrder="Ascending" Index="-1" />
+        <ColumnInfo Id="SysUser" Width="66" SortIndex="-1" SortOrder="None" Index="-1" />
+        <ColumnInfo Id="CCpName" Width="72" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="sPCode" Width="68" />
+        <ColumnInfo Id="AddProject" Width="81" />
+        <ColumnInfo Id="Tp" Width="68" />
+        <ColumnInfo Id="Address" Width="63" Index="4" />
+        <ColumnInfo Id="StateName" Width="68" Index="5" />
+      </Columns>
+    </ListView>
+    <ListView Id="ProjectProgress_ProgressDetails_ListView">
+      <Columns>
+        <ColumnInfo Id="PlanDesignTime" Width="116" />
+        <ColumnInfo Id="RealDesignTime" Width="116" />
+        <ColumnInfo Id="PlanSysTime" Width="116" />
+        <ColumnInfo Id="RealSysTime" Width="116" />
+        <ColumnInfo Id="PlanDebugTime" Width="116" />
+        <ColumnInfo Id="RealDebugTime" Width="116" />
+        <ColumnInfo Id="PlanPlRunTime" Width="104" />
+        <ColumnInfo Id="RealPlRunTime" Width="104" />
+        <ColumnInfo Id="PlanTrainTime" Width="92" />
+        <ColumnInfo Id="RealTrainTime" Width="92" />
+      </Columns>
+      <HiddenActions>
+        <ActionLink ActionId="Link" IsNewNode="True" />
+        <ActionLink ActionId="Unlink" IsNewNode="True" />
+      </HiddenActions>
+    </ListView>
+    <ListView Id="Record_WorkingTotals_ListView">
+      <Columns>
+        <ColumnInfo Id="Oid" Width="82" />
+        <ColumnInfo Id="RName" Width="81" />
+        <ColumnInfo Id="TotalMinutes" Width="97" />
+        <ColumnInfo Id="TotalHours" Width="85" />
+        <ColumnInfo Id="RecordName" Width="89" />
+      </Columns>
+    </ListView>
+    <ListView Id="SecuritySystemTypePermissionsObjectOwner_TypePermissions_ListView" ShowAutoFilterRow="True" FilterEnabled="True" Filter="">
+      <Columns>
+        <ColumnInfo Id="Owner" Width="96" />
+        <ColumnInfo Id="TargetType" Width="96" />
+        <ColumnInfo Id="Object" Width="66" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="AllowRead" Width="55" />
+        <ColumnInfo Id="AllowWrite" Width="58" />
+        <ColumnInfo Id="AllowCreate" Width="65" />
+        <ColumnInfo Id="AllowDelete" Width="65" />
+        <ColumnInfo Id="AllowNavigate" Width="78" />
+      </Columns>
+    </ListView>
+    <ListView Id="SellProject_AddProjects_ListView">
+      <Columns>
+        <ColumnInfo Id="CNName" Width="150" SortIndex="-1" SortOrder="None" Index="-1" />
+        <ColumnInfo Id="Description" Width="112" />
+        <ColumnInfo Id="Oid" Width="112" />
+        <ColumnInfo Id="OrderTp" Width="118" Index="-1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="SpCode" Width="112" />
+        <ColumnInfo Id="SysUser" SortIndex="-1" SortOrder="None" Index="-1" Width="96" />
+        <ColumnInfo Id="AddCode" Width="105" SortIndex="0" SortOrder="Ascending" Index="0" />
+        <ColumnInfo Id="APName" Width="92" Index="1" />
+        <ColumnInfo Id="CCpName" Width="92" Index="2" />
+        <ColumnInfo Id="AddDate" Width="68" Index="3" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="APrincipal" Width="71" Index="4" />
+        <ColumnInfo Id="APhone" Width="68" Index="5" />
+      </Columns>
+      <HiddenActions>
+        <ActionLink ActionId="Link" IsNewNode="True" />
+        <ActionLink ActionId="Unlink" IsNewNode="True" />
+      </HiddenActions>
+    </ListView>
+    <DetailView Id="SellProject_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="19.472361809045225">
+            <LayoutGroup Id="SellProject" RelativeSize="100">
+              <LayoutGroup Id="SellProject_col1" ShowCaption="False" Index="0" RelativeSize="51.148730350665055" IsNewNode="True" Removed="True">
+                <LayoutItem Id="PspSpCode" ViewItem="PspSpCode" Index="0" RelativeSize="28.94736842105263" IsNewNode="True" />
+                <LayoutItem Id="OrderType" ViewItem="OrderType" Index="1" RelativeSize="21.05263157894737" IsNewNode="True" />
+                <LayoutItem Id="Code" ViewItem="Code" Index="2" RelativeSize="21.05263157894737" IsNewNode="True" />
+                <LayoutItem Id="SPName" ViewItem="SPName" Index="3" RelativeSize="28.94736842105263" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="SellProject_col2" ShowCaption="False" Index="1" RelativeSize="48.851269649334945" IsNewNode="True" Removed="True">
+                <LayoutItem Id="SpCCpName" ViewItem="SpCCpName" Index="0" RelativeSize="28.94736842105263" IsNewNode="True" />
+                <LayoutItem Id="SpDate" ViewItem="SpDate" Index="1" RelativeSize="21.05263157894737" IsNewNode="True" />
+                <LayoutItem Id="SPrincipal" ViewItem="SPrincipal" Index="2" RelativeSize="21.05263157894737" IsNewNode="True" />
+                <LayoutItem Id="SPhone" ViewItem="SPhone" Index="3" RelativeSize="28.94736842105263" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="AddProjects_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" Index="1" RelativeSize="80.527638190954775">
+            <LayoutItem Id="AddProjects" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="81.58536585365853" Caption="项目描述" ShowCaption="False" Removed="True">
+            <LayoutItem Id="SpDescription" ViewItem="SpDescription" Index="0" RelativeSize="100" IsNewNode="True" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SellProject_ListView">
+      <Columns>
+        <ColumnInfo Id="CNName" SortOrder="None" Index="-1" SortIndex="-1" />
+        <ColumnInfo Id="SpDescription" PropertyName="SpDescription" Index="-1" IsNewNode="True" Removed="True" />
+        <ColumnInfo Id="SysUser" Index="-1" />
+        <ColumnInfo Id="PspSpCode" Width="81" Index="0" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="OrderType" Index="1" Width="79" />
+        <ColumnInfo Id="Code" Width="68" Index="2" />
+        <ColumnInfo Id="SPName" Index="3" Width="68" />
+        <ColumnInfo Id="SpCCpName" Width="92" Index="4" />
+        <ColumnInfo Id="SpDate" Width="68" Index="5" />
+        <ColumnInfo Id="SPrincipal" Index="6" />
+        <ColumnInfo Id="SPhone" Index="7" SortIndex="-1" SortOrder="None" />
+      </Columns>
+    </ListView>
+    <ListView Id="SysRole_ChangeHistory_ListView">
+      <Columns>
+        <ColumnInfo Id="UserName" SortOrder="Ascending" Width="92" />
+        <ColumnInfo Id="ModifiedOn" Width="85" />
+        <ColumnInfo Id="OperationType" Width="106" />
+        <ColumnInfo Id="PropertyName" Width="102" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SysRole_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="权限名称" />
+        <PropertyEditor Id="TypePermissions" Caption="权限类型" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100" TextAlignMode="UseParentOptions">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="10.424242424242424">
+            <LayoutGroup Id="SecuritySystemRoleBase" RelativeSize="100" Index="0">
+              <LayoutGroup Id="Auto66af2365-a917-4fb1-bbcd-e4273560c405" ShowCaption="False" Caption="" Direction="Horizontal" Index="0" RelativeSize="38.372093023255815" IsNewNode="True">
+                <LayoutItem Id="Name" ViewItem="Name" Index="0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="Company" ViewItem="Company" Index="1" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="IsAdministrative" RelativeSize="26.744186046511629" />
+              <LayoutItem Id="CanEditModel" RelativeSize="34.883720930232556" />
+              <LayoutItem Id="Name" RelativeSize="37.804878048780488" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="SysRole" RelativeSize="42.857142857142854" Removed="True">
+              <LayoutItem Id="HiddenNavigationItems" RelativeSize="45" />
+              <LayoutItem Id="Notes" RelativeSize="55" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="44">
+            <LayoutItem Id="Users_Included" RelativeSize="49.311294765840223" />
+            <LayoutItem Id="TypePermissions_Included" RelativeSize="50.688705234159777" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" Index="2" RelativeSize="45.575757575757578" IsNewNode="True" Removed="True">
+            <LayoutGroup Id="Item1" ShowCaption="True" Caption="所有功能" CaptionLocation="Top" TextAlignMode="AlignWithChildren" Index="0" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="TypePermissions" ViewItem="TypePermissions" Index="0" RelativeSize="100" TextAlignMode="AutoSize" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="1" Caption="更改记录" TextAlignMode="AlignWithChildren" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="ChangeHistory" ViewItem="ChangeHistory" Index="0" RelativeSize="100" TextAlignMode="AutoSize" IsNewNode="True" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SysRole_ListView" FilterEnabled="True" Filter="">
+      <Columns>
+        <ColumnInfo Id="HiddenNavigationItems" Width="344" Index="-1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="Notes" Width="188" SortIndex="-1" SortOrder="None" Index="-1" />
+        <ColumnInfo Id="Name" SortIndex="0" SortOrder="Descending" Width="81" Caption="权限名称" />
+        <ColumnInfo Id="Users_Included" SortIndex="-1" SortOrder="None" Width="103" />
+        <ColumnInfo Id="TypePermissions_Included" Width="163" />
+      </Columns>
+    </ListView>
+    <ListView Id="SysRole_SysUsers_ListView">
+      <Columns>
+        <ColumnInfo Id="FullName" Width="68" />
+        <ColumnInfo Id="IsActive" Width="68" />
+        <ColumnInfo Id="UserName" Width="0" />
+        <ColumnInfo Id="ChangePasswordOnFirstLogon" Width="152" />
+        <ColumnInfo Id="Department" Width="86" />
+        <ColumnInfo Id="Section" Width="68" />
+        <ColumnInfo Id="Position" Width="62" />
+        <ColumnInfo Id="Email" Width="47" />
+        <ColumnInfo Id="Address" Width="68" />
+        <ColumnInfo Id="Telephone" Width="79" />
+        <ColumnInfo Id="Birthday" Width="68" />
+        <ColumnInfo Id="OpenID" Width="62" />
+        <ColumnInfo Id="ApplyStaffId" Width="87" />
+        <ColumnInfo Id="UnionID" Width="67" />
+        <ColumnInfo Id="Comment" Width="92" />
+      </Columns>
+    </ListView>
+    <ListView Id="SysUser_AddProjects_ListView">
+      <Columns>
+        <ColumnInfo Id="CNName" SortOrder="Descending" Width="129" />
+        <ColumnInfo Id="SpCode" Width="68" Index="1" />
+        <ColumnInfo Id="OrderTp" Width="68" Index="2" />
+        <ColumnInfo Id="AddCode" Width="92" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="APName" Width="92" Index="3" />
+        <ColumnInfo Id="CCpName" Width="92" Index="4" />
+        <ColumnInfo Id="AddDate" Width="68" Index="5" />
+        <ColumnInfo Id="APrincipal" Width="71" Index="6" />
+        <ColumnInfo Id="APhone" Width="68" Index="7" />
+      </Columns>
+    </ListView>
+    <ListView Id="SysUser_ChangeHistory_ListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Width="92" />
+        <ColumnInfo Id="ModifiedOn" Width="85" />
+        <ColumnInfo Id="OperationType" Width="106" />
+        <ColumnInfo Id="PropertyName" Width="102" />
+      </Columns>
+    </ListView>
+    <ListView Id="SysUser_CustomerCompanies_ListView">
+      <Columns>
+        <ColumnInfo Id="CPName" Width="81" />
+        <ColumnInfo Id="legalMan" Width="80" />
+        <ColumnInfo Id="Address" Width="68" />
+        <ColumnInfo Id="RegisteredFund" Width="90" />
+        <ColumnInfo Id="ReiestDate" Width="68" />
+        <ColumnInfo Id="CompanyType" Width="98" />
+      </Columns>
+    </ListView>
+    <ListView Id="SysUser_Customers_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Width="81" />
+        <ColumnInfo Id="CSex" Width="68" />
+        <ColumnInfo Id="Position" Width="68" />
+        <ColumnInfo Id="Phone1" Width="0" />
+        <ColumnInfo Id="Phone2" Width="0" />
+        <ColumnInfo Id="Adress" Width="56" />
+        <ColumnInfo Id="Origo" Width="49" />
+        <ColumnInfo Id="E_mail" Width="54" />
+        <ColumnInfo Id="CustomerCompany" Width="122" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SysUser_DetailView">
+      <Items>
+        <PropertyEditor Id="Birthday" Removed="True" />
+        <PropertyEditor Id="Position" Removed="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="22.679045092838198">
+            <LayoutGroup Id="SysUser" RelativeSize="100">
+              <LayoutGroup Id="SysUser_col1" RelativeSize="49.939831528279178">
+                <LayoutItem Id="IsActive" RelativeSize="23.134328358208954" />
+                <LayoutItem Id="UserName" RelativeSize="17.910447761194028" />
+                <LayoutItem Id="ChangePasswordOnFirstLogon" RelativeSize="17.164179104477611" />
+                <LayoutItem Id="FullName" RelativeSize="17.910447761194028" />
+                <LayoutItem Id="Company" RelativeSize="23.880597014925375" />
+                <LayoutItem Id="Department" RelativeSize="20.625" Removed="True" />
+                <LayoutItem Id="Position" Removed="True" />
+                <LayoutItem Id="Section" RelativeSize="18.817204301075268" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="SysUser_col2" RelativeSize="50.060168471720822">
+                <LayoutItem Id="Department" ViewItem="Department" Index="0" RelativeSize="23.134328358208954" IsNewNode="True" />
+                <LayoutItem Id="Email" RelativeSize="17.910447761194028" Index="1" />
+                <LayoutItem Id="Address" RelativeSize="17.910447761194028" Index="2" />
+                <LayoutItem Id="OpenID" RelativeSize="12.903225806451612" Index="3" Removed="True" />
+                <LayoutItem Id="Telephone" RelativeSize="17.164179104477611" Index="3" />
+                <LayoutItem Id="ApplyStaffId" RelativeSize="23.880597014925375" Index="4" />
+                <LayoutItem Id="Comment" RelativeSize="34.375" Index="4" Removed="True" />
+                <LayoutItem Id="UnionID" RelativeSize="14.814814814814815" Index="4" Removed="True" />
+                <LayoutItem Id="Birthday" RelativeSize="5.1020408163265305" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="77.3209549071618">
+            <LayoutGroup Id="SysRoles" TextAlignMode="AlignWithChildren" RelativeSize="100">
+              <LayoutItem Id="SysRoles" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="AddProjects" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="1" Removed="True">
+              <LayoutItem Id="AddProjects" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="ChangeHistory" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="1">
+              <LayoutItem Id="ChangeHistory" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="CustomerCompanies" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="1" Removed="True">
+              <LayoutItem Id="CustomerCompanies" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="InvoiceReceipts" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="1" Removed="True">
+              <LayoutItem Id="InvoiceReceipts" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Orders" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="1" Removed="True">
+              <LayoutItem Id="Orders" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="PresellProjects" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="1" Removed="True">
+              <LayoutItem Id="PresellProjects" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="ProjectProgresses" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="1" Removed="True">
+              <LayoutItem Id="ProjectProgresses" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="SellProjects" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="1" Removed="True">
+              <LayoutItem Id="SellProjects" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Customers" TextAlignMode="AlignWithChildren" RelativeSize="100" Removed="True">
+              <LayoutItem Id="Customers" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SysUser_InvoiceReceipts_ListView">
+      <Columns>
+        <ColumnInfo Id="OrderCode" Width="79" />
+        <ColumnInfo Id="CCpName" Width="81" />
+        <ColumnInfo Id="sPCode" Width="68" />
+        <ColumnInfo Id="AddProject" Width="81" />
+        <ColumnInfo Id="Address" Width="63" />
+        <ColumnInfo Id="ODuty" Width="55" />
+        <ColumnInfo Id="OMoney" Width="121" />
+        <ColumnInfo Id="Tax_OMoney" Width="109" />
+      </Columns>
+    </ListView>
+    <ListView Id="SysUser_ListView">
+      <Columns>
+        <ColumnInfo Id="Address" Index="-1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="ApplyStaffId" Index="-1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="Birthday" Index="-1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="ChangePasswordOnFirstLogon" Width="152" Index="-1" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="Comment" Index="-1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="IsActive" Width="68" SortIndex="-1" SortOrder="None" Index="-1" />
+        <ColumnInfo Id="OpenID" Index="-1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="Position" Index="-1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="Section" SortIndex="-1" SortOrder="None" Index="-1" />
+        <ColumnInfo Id="UnionID" Index="-1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="FullName" Width="68" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="UserName" Width="0" Index="1" />
+        <ColumnInfo Id="Company" Index="2" />
+        <ColumnInfo Id="Department" Width="86" Index="3" />
+        <ColumnInfo Id="Email" Index="4" Width="47" />
+        <ColumnInfo Id="Telephone" Index="5" Width="79" />
+      </Columns>
+    </ListView>
+    <ListView Id="SysUser_Orders_ListView">
+      <Columns>
+        <ColumnInfo Id="COName" Width="105" />
+        <ColumnInfo Id="Code" Width="68" />
+        <ColumnInfo Id="OName" Width="68" />
+        <ColumnInfo Id="Tp" Width="68" />
+        <ColumnInfo Id="CpName" Width="68" />
+        <ColumnInfo Id="sPCode" Width="68" />
+        <ColumnInfo Id="AddProject" Width="81" />
+        <ColumnInfo Id="sPName" Width="92" />
+        <ColumnInfo Id="aPName" Width="92" />
+        <ColumnInfo Id="Tax_Money" Width="85" />
+        <ColumnInfo Id="DutyGrade" Width="78" />
+        <ColumnInfo Id="Money" Width="97" />
+        <ColumnInfo Id="Address" Width="63" />
+        <ColumnInfo Id="CreateTime" Width="68" />
+      </Columns>
+    </ListView>
+    <ListView Id="SysUser_PresellProjects_ListView">
+      <Columns>
+        <ColumnInfo Id="PSCName" Width="105" />
+        <ColumnInfo Id="Code" Width="92" />
+        <ColumnInfo Id="PSName" Width="68" />
+        <ColumnInfo Id="CCpName" Width="92" />
+        <ColumnInfo Id="Address" Width="63" />
+        <ColumnInfo Id="Principal" Width="63" />
+        <ColumnInfo Id="Phone" Width="68" />
+        <ColumnInfo Id="CreateTime" Width="87" />
+      </Columns>
+    </ListView>
+    <ListView Id="SysUser_ProjectProgresses_ListView">
+      <Columns>
+        <ColumnInfo Id="CCpName" Width="81" />
+        <ColumnInfo Id="sPCode" Width="68" />
+        <ColumnInfo Id="AddProject" Width="81" />
+        <ColumnInfo Id="Tp" Width="68" />
+        <ColumnInfo Id="sPName" Width="92" />
+        <ColumnInfo Id="aPName" Width="92" />
+        <ColumnInfo Id="Address" Width="63" />
+        <ColumnInfo Id="StateName" Width="68" />
+      </Columns>
+    </ListView>
+    <ListView Id="SysUser_SellProjects_ListView">
+      <Columns>
+        <ColumnInfo Id="CNName" Width="129" />
+        <ColumnInfo Id="PspSpCode" Width="81" />
+        <ColumnInfo Id="OrderType" Width="79" />
+        <ColumnInfo Id="Code" Width="68" />
+        <ColumnInfo Id="SPName" Width="68" />
+        <ColumnInfo Id="SpCCpName" Width="92" />
+        <ColumnInfo Id="SpDate" Width="68" />
+        <ColumnInfo Id="SPhone" Width="68" />
+      </Columns>
+    </ListView>
+    <ListView Id="SysUser_SysRoles_ListView">
+      <Columns>
+        <ColumnInfo Id="CanEditModel" Width="79" />
+        <ColumnInfo Id="HiddenNavigationItems" Width="169" Index="-1" />
+        <ColumnInfo Id="IsAdministrative" Width="79" />
+        <ColumnInfo Id="Notes" Width="76" SortIndex="0" SortOrder="Descending" Index="-1" />
+        <ColumnInfo Id="Name" Width="51" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="Users_Included" Width="103" />
+        <ColumnInfo Id="TypePermissions_Included" Width="163" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

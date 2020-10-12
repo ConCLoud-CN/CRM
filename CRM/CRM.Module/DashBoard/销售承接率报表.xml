@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="zh-CN">
+  <Title Text="承接率报表" />
+  <DataSources>
+    <ObjectDataSource Name="Object Data Source 1" ComponentName="dashboardObjectDataSource1">
+      <DataSource Type="CRM.Module.BusinessObjects.ProjectManagement.Project, CRM.Module, Version=1.0.7590.26727, Culture=neutral, PublicKeyToken=null" />
+    </ObjectDataSource>
+  </DataSources>
+  <Items>
+    <Pivot ComponentName="pivotDashboardItem1" Name="承接率" DataSource="dashboardObjectDataSource1" FilterString="[DataItem2] &lt;&gt; '增补'">
+      <DataItems>
+        <Dimension DataMember="CreateTime" DateTimeGroupInterval="MonthYear" DefaultId="DataItem0" />
+        <Measure DataMember="Type.TName" SummaryType="Count" FilterString="[DataItem2] &lt;&gt; '增补'" DefaultId="DataItem1">
+          <Calculation>
+            <PercentOfTotal />
+          </Calculation>
+          <WindowDefinition>
+            <PivotWindowDefinition />
+          </WindowDefinition>
+        </Measure>
+        <Dimension DataMember="Type.TName" DefaultId="DataItem2" />
+      </DataItems>
+      <Columns>
+        <Column DefaultId="DataItem2" />
+      </Columns>
+      <Rows>
+        <Row DefaultId="DataItem0" />
+      </Rows>
+      <Values>
+        <Value DefaultId="DataItem1" />
+      </Values>
+    </Pivot>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="pivotDashboardItem1" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

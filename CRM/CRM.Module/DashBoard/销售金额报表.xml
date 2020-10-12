@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="zh-CN">
+  <Title Text="销售金额报表" />
+  <DataSources>
+    <ObjectDataSource Name="Object Data Source 1" ComponentName="dashboardObjectDataSource1">
+      <DataSource Type="CRM.Module.BusinessObjects.SellManagement.Order, CRM.Module, Version=1.0.7590.24017, Culture=neutral, PublicKeyToken=null" />
+    </ObjectDataSource>
+  </DataSources>
+  <Items>
+    <Pivot ComponentName="pivotDashboardItem1" Name="合同明细" DataSource="dashboardObjectDataSource1">
+      <DataItems>
+        <Measure DataMember="Tax_Money" Name="金额(含税)¥ " DefaultId="DataItem1" />
+        <Dimension DataMember="CreateTime" DefaultId="DataItem2" />
+        <Dimension DataMember="CreateTime" DateTimeGroupInterval="Quarter" DefaultId="DataItem3" />
+        <Dimension DataMember="Project.Type.TName" DefaultId="DataItem4" />
+        <Dimension DataMember="COName" DefaultId="DataItem0" />
+        <Dimension DataMember="CreateTime" DateTimeGroupInterval="Month" DefaultId="DataItem5" />
+      </DataItems>
+      <Columns>
+        <Column DefaultId="DataItem2" />
+        <Column DefaultId="DataItem3" />
+        <Column DefaultId="DataItem5" />
+      </Columns>
+      <Rows>
+        <Row DefaultId="DataItem4" />
+        <Row DefaultId="DataItem0" />
+      </Rows>
+      <Values>
+        <Value DefaultId="DataItem1" />
+      </Values>
+    </Pivot>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="pivotDashboardItem1" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

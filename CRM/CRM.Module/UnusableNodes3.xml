@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="CRM.Module.BusinessObjects.ProjectManagement.PresellProject" DefaultListViewShowAutoFilterRow="True" DefaultListViewShowFindPanel="True" />
+    <Class Name="CRM.Module.BusinessObjects.ProjectManagement.SellProject" DefaultListViewShowAutoFilterRow="True" DefaultListViewShowFindPanel="True" />
+    <Class Name="CRM.Module.BusinessObjects.SellManagement.OrderType" DefaultListViewShowAutoFilterRow="True" DefaultListViewShowFindPanel="True" />
+  </BOModel>
+  <Views Id="Views">
+    <ListView Id="SellProject_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="PspSpCode" Width="92" />
+        <ColumnInfo Id="Code" Width="81" />
+        <ColumnInfo Id="SpCCpName" Width="92" />
+        <ColumnInfo Id="SpDate" Width="68" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

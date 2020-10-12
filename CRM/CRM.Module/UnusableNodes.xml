@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Default">
+        <Items Id="Items">
+          <Item Id="AddProject_ListView" Caption="增补项目" />
+          <Item Id="Company_ListView" Caption="客户公司" />
+          <Item Id="CompanyType_ListView" Caption="客户公司类型" />
+          <Item Id="Customer_ListView" Caption="客户" />
+          <Item Id="Order_ListView" Caption="合同" />
+          <Item Id="OrderType_ListView" Caption="合同类型" />
+          <Item Id="PresellProject_ListView" Caption="预售项目" />
+          <Item Id="Project_ListView" Caption="项目" />
+          <Item Id="SellProject_ListView" Caption="立项项目" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

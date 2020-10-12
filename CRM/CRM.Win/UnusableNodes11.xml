@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="项目管理">
+        <Items Id="Items">
+          <Item Id="SellProject_ListView" ViewId="SellProject_ListView" />
+        </Items>
+      </Item>
+      <Item Id="Reports">
+        <Items Id="Items">
+          <DashboardNavigationItem Id="开票收款报表" Removed="True" />
+          <DashboardNavigationItem Id="销售承接率报表" Removed="True" />
+          <Item Id="销售金额报表" Removed="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Views Id="Views">
+    <DetailView Id="Project_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Project">
+              <LayoutGroup Id="Project_col2">
+                <LayoutItem Id="Address" RelativeSize="28.87323943661972" Index="3" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ProjectProgress_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ProjectProgress">
+              <LayoutGroup Id="ProjectProgress_col1">
+                <LayoutItem Id="Type" RelativeSize="26.785714285714285" />
+              </LayoutGroup>
+              <LayoutGroup Id="ProjectProgress_col2">
+                <LayoutItem Id="Address" RelativeSize="36.607142857142854" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ProjectProgress_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Type" Width="84" Index="0" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SysRole_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SecuritySystemRoleBase">
+              <LayoutGroup Id="Auto66af2365-a917-4fb1-bbcd-e4273560c405">
+                <LayoutItem Id="Company" ViewItem="Company" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SysUser_ProjectProgresses_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Type" Width="84" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

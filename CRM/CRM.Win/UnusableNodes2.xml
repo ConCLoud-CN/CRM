@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="AddProject_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="AddProject" RelativeSize="100">
+              <LayoutGroup Id="AddProject_col1" RelativeSize="49.638554216867469">
+                <LayoutItem Id="SpCode" RelativeSize="4.382470119521912" Index="0" />
+                <LayoutItem Id="APName" Index="3" RelativeSize="89.243027888446221" />
+              </LayoutGroup>
+              <LayoutGroup Id="AddProject_col2" RelativeSize="50.361445783132531">
+                <LayoutItem Id="CCpName" ViewItem="CCpName" Index="0" RelativeSize="4.382470119521912" />
+                <LayoutItem Id="APrincipal" RelativeSize="3.1872509960159361" Index="2" />
+                <LayoutItem Id="APhone" ViewItem="APhone" Index="3" RelativeSize="89.243027888446221" Removed="True" />
+                <LayoutItem Id="SysUser" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="81.030150753768851" Caption="项目描述" Removed="True">
+            <LayoutItem Id="Item1" Index="1" RelativeSize="79.844961240310084" />
+            <LayoutItem Id="Description" RelativeSize="20.155038759689923" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="AddProject_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SysUser" SortIndex="1" SortOrder="Ascending" Index="-1" />
+        <ColumnInfo Id="SpCode" Index="0" Width="68" />
+        <ColumnInfo Id="APName" Index="3" Width="92" />
+        <ColumnInfo Id="CCpName" Index="4" Width="92" />
+        <ColumnInfo Id="AddDate" Index="5" Width="68" />
+        <ColumnInfo Id="APrincipal" Index="6" Width="71" />
+        <ColumnInfo Id="APhone" Index="7" Width="68" />
+      </Columns>
+    </ListView>
+    <ListView Id="CustomerCompany_AddProjects_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SpCode" Index="0" Width="81" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="APName" Index="2" Width="92" />
+        <ColumnInfo Id="AddDate" Index="3" Width="68" />
+        <ColumnInfo Id="APrincipal" Index="4" Width="71" />
+        <ColumnInfo Id="APhone" Index="5" Width="68" />
+        <ColumnInfo Id="SysUser" Index="6" Width="66" />
+      </Columns>
+    </ListView>
+    <ListView Id="CustomerCompany_SellProjects_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Code" SortOrder="None" Width="68" SortIndex="-1" Index="2" />
+        <ColumnInfo Id="SysUser" Width="66" Index="7" />
+      </Columns>
+    </ListView>
+    <ListView Id="PresellProject_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="CreateTime" Width="87" Index="-1" />
+        <ColumnInfo Id="SysUser" SortIndex="-1" SortOrder="None" Index="-1" />
+        <ColumnInfo Id="Code" Width="99" SortIndex="0" SortOrder="Ascending" Index="0" />
+        <ColumnInfo Id="PName" Width="99" SortIndex="1" />
+        <ColumnInfo Id="CCpName" Width="114" Index="3" />
+        <ColumnInfo Id="Address" Width="74" Index="4" />
+        <ColumnInfo Id="Principal" Width="72" Index="4" />
+        <ColumnInfo Id="Phone" Width="84" Index="6" />
+      </Columns>
+    </ListView>
+    <ListView Id="SellProject_AddProjects_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Description" Width="112" />
+        <ColumnInfo Id="Oid" Width="112" />
+        <ColumnInfo Id="SpCode" Width="112" />
+        <ColumnInfo Id="SysUser" SortIndex="-1" SortOrder="None" Index="-1" Width="96" />
+        <ColumnInfo Id="APName" Width="92" Index="1" />
+        <ColumnInfo Id="CCpName" Width="92" Index="2" />
+        <ColumnInfo Id="AddDate" Width="68" Index="3" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="APrincipal" Width="71" Index="4" />
+        <ColumnInfo Id="APhone" Width="68" Index="5" />
+      </Columns>
+    </ListView>
+    <ListView Id="SellProject_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SysUser" Index="-1" />
+        <ColumnInfo Id="PName" Width="99" />
+        <ColumnInfo Id="Code" Width="84" Index="2" />
+      </Columns>
+    </ListView>
+    <ListView Id="SysUser_AddProjects_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SpCode" Width="68" Index="1" />
+        <ColumnInfo Id="APName" Width="92" Index="3" />
+        <ColumnInfo Id="CCpName" Width="92" Index="4" />
+        <ColumnInfo Id="AddDate" Width="68" Index="5" />
+        <ColumnInfo Id="APrincipal" Width="71" Index="6" />
+        <ColumnInfo Id="APhone" Width="68" Index="7" />
+      </Columns>
+    </ListView>
+    <ListView Id="SysUser_PresellProjects_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Code" Width="92" />
+        <ColumnInfo Id="CCpName" Width="92" />
+        <ColumnInfo Id="Address" Width="63" />
+        <ColumnInfo Id="Principal" Width="63" />
+        <ColumnInfo Id="Phone" Width="68" />
+        <ColumnInfo Id="CreateTime" Width="87" />
+      </Columns>
+    </ListView>
+    <DetailView Id="CustomerCompany_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="AddProjects">
+              <LayoutItem Id="AddProjects" ViewItem="AddProjects" />
+            </LayoutGroup>
+            <LayoutGroup Id="SellProjects">
+              <LayoutItem Id="SellProjects" ViewItem="SellProjects" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SysRole_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SecuritySystemRoleBase">
+              <LayoutGroup Id="Auto66af2365-a917-4fb1-bbcd-e4273560c405">
+                <LayoutItem Id="Company" ViewItem="Company" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SysUser_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="AddProjects" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="1" Removed="True">
+              <LayoutItem Id="AddProjects" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="PresellProjects" TextAlignMode="AlignWithChildren" RelativeSize="100" Index="1" Removed="True">
+              <LayoutItem Id="PresellProjects" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="项目管理">
+        <Items Id="Items">
+          <Item Id="PresellProject_ListView" Index="1" />
+          <Item Id="AddProject_ListView" Index="3" />
+          <Item Id="SellProject_ListView" ViewId="SellProject_ListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="CRM" Company="上海悠云实业有限公司" Copyright="Concloud">
+  <ActionDesign>
+    <Actions>
+      <Action Id="Cancel" Caption="取消" ShowItemsOnClick="False" ImageName="" />
+      <Action Id="CancelAction" Caption="取消" />
+      <Action Id="DialogCancel" Caption="取消" />
+      <Action Id="Logoff" Caption="退出" />
+      <Action Id="Logon" Caption="登录" PaintStyle="Default" ImageName="" />
+      <Action Id="Save" Caption="保存" />
+    </Actions>
+    <ActionToContainerMapping>
+      <ActionContainer Id="Edit" Caption="编辑" />
+      <ActionContainer Id="FullTextSearch" Caption="全文检索" />
+      <ActionContainer Id="RecordsNavigation" Caption="记录导航栏" />
+    </ActionToContainerMapping>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="CRM.Module.BusinessObjects.CustomerInformationManagement.Customer" DefaultListViewShowFindPanel="True" DefaultListViewShowAutoFilterRow="True" />
+    <Class Name="CRM.Module.BusinessObjects.CustomerInformationManagement.CustomerCompany" DefaultListViewShowAutoFilterRow="True" DefaultListViewShowFindPanel="True" />
+    <Class Name="CRM.Module.BusinessObjects.CustomerInformationManagement.CustomerCompanyType" DefaultListViewShowAutoFilterRow="True" DefaultListViewShowFindPanel="True" />
+    <Class Name="CRM.Module.BusinessObjects.ProjectManagement.ProjectProgress" DefaultListViewShowAutoFilterRow="True" DefaultListViewShowFindPanel="True" />
+    <Class Name="CRM.Module.BusinessObjects.SellManagement.InvoiceReceipt" DefaultListViewShowAutoFilterRow="True" DefaultListViewShowFindPanel="True" />
+    <Class Name="CRM.Module.BusinessObjects.SellManagement.Order" DefaultListViewShowAutoFilterRow="True" DefaultListViewShowFindPanel="True" />
+    <Class Name="CRM.Module.BusinessObjects.SellManagement.PayInvoiceDetail" DefaultListViewShowAutoFilterRow="True" DefaultListViewShowFindPanel="True" />
+  </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="Reports">
+        <Items>
+          <DashboardNavigationItem Id="@0d1febeb-3fb0-4a7d-a5d5-654d9d88755b" DashboardTitle="销售承接率报表" Caption="销售承接率报表" IsNewNode="True" />
+          <DashboardNavigationItem Id="@192f7cbf-ae24-42ee-a7e3-a7944958e7c6" DashboardTitle="销售金额报表" Caption="销售金额报表" IsNewNode="True" />
+          <DashboardNavigationItem Id="@2e25f7a0-642e-4bc3-aa48-e9ef97e93f5e" DashboardTitle="开票收款报表" Caption="开票收款报表" IsNewNode="True" />
+          <Item Id="Dashboards" Visible="False" />
+        </Items>
+      </Item>
+      <Item Id="客户信息管理" ImageName="BO_Contact">
+        <Items>
+          <Item Id="CustomerCompanyType_ListView" ImageName="BO_Contact" QuickAccessItem="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SchedulerModuleBase" Version="20.1.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="20.1.3.0" IsNewNode="True" />
+  </SchemaModules>
+</Application>

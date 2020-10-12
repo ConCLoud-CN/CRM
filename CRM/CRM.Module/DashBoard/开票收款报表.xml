@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="zh-CN">
+  <Title Text="开票收款报表" />
+  <DataSources>
+    <ObjectDataSource Name="Object Data Source 1" ComponentName="dashboardObjectDataSource1">
+      <DataSource Type="CRM.Module.BusinessObjects.SellManagement.InvoiceReceipt, CRM.Module, Version=1.0.7590.25793, Culture=neutral, PublicKeyToken=null" />
+    </ObjectDataSource>
+  </DataSources>
+  <Items>
+    <Pivot ComponentName="pivotDashboardItem1" Name="开票收款" DataSource="dashboardObjectDataSource1">
+      <DataItems>
+        <Measure DataMember="Tax_OMoney" Name="合同金额(含税)¥" DefaultId="DataItem1" />
+        <Dimension DataMember="Project" DefaultId="DataItem0" />
+        <Dimension DataMember="Order.COName" DefaultId="DataItem2" />
+        <Measure DataMember="OTotal" Name="回款金额(含税)¥" DefaultId="DataItem3" />
+      </DataItems>
+      <Columns>
+        <Column DefaultId="DataItem0" />
+      </Columns>
+      <Rows>
+        <Row DefaultId="DataItem2" />
+      </Rows>
+      <Values>
+        <Value DefaultId="DataItem1" />
+        <Value DefaultId="DataItem3" />
+      </Values>
+    </Pivot>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="pivotDashboardItem1" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

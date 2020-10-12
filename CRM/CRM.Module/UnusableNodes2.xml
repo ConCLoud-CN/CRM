@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="SellProject_Subordinates_ListView" MasterDetailMode="ListViewAndDetailView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Code" Width="81" />
+        <ColumnInfo Id="PspSpCode" Width="92" />
+        <ColumnInfo Id="ProjectType" Width="87" />
+        <ColumnInfo Id="Name" Width="68" />
+        <ColumnInfo Id="SpCCpName" Width="92" />
+        <ColumnInfo Id="SpDate" Width="68" />
+        <ColumnInfo Id="Principal" Width="63" />
+        <ColumnInfo Id="Phone" Width="68" />
+      </Columns>
+    </ListView>
+    <ListView Id="SellProject_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ProjectType" Width="87" />
+        <ColumnInfo Id="Name" Width="68" />
+        <ColumnInfo Id="Principal" Width="63" />
+        <ColumnInfo Id="Phone" Width="68" />
+        <ColumnInfo Id="SProject" Width="66" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

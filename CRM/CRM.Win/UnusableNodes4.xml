@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Order_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Order">
+              <LayoutGroup Id="Order_col1">
+                <LayoutItem Id="Tp" Index="2" RelativeSize="14.851485148514852" Removed="True" />
+                <LayoutItem Id="sPName" Index="4" RelativeSize="14.851485148514852" />
+                <LayoutItem Id="aPName" Index="5" RelativeSize="20.297029702970296" />
+              </LayoutGroup>
+              <LayoutGroup Id="Order_col2">
+                <LayoutItem Id="Tax_Money" RelativeSize="20.297029702970296" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CustomerCompany_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="AddProjects">
+              <LayoutItem Id="AddProjects" ViewItem="AddProjects" />
+            </LayoutGroup>
+            <LayoutGroup Id="SellProjects">
+              <LayoutItem Id="SellProjects" ViewItem="SellProjects" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SysRole_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SecuritySystemRoleBase">
+              <LayoutGroup Id="Auto66af2365-a917-4fb1-bbcd-e4273560c405">
+                <LayoutItem Id="Company" ViewItem="Company" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="项目管理">
+        <Items Id="Items">
+          <Item Id="SellProject_ListView" ViewId="SellProject_ListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>
